@@ -74,5 +74,7 @@ echo " "
 echo ">> Arcane R3 <<"
 echo " "
 
-# example usage
+# scoring
 check_text_exists "/home/ekko/Desktop/Forensics_1.txt" "2024-12-03 14:35:12 Viktor accessed restricted research data." "Forensics 1 Solved."
+check_text_exists "/home/ekko/Desktop/Forensics_2.txt" "7b65e03e66bf9159e7e808561469182c" "Forensics 2 Solved."
+check_text_exists "/home/ekko/Desktop/Forensics_3.txt" "10.0.0.99" "Forensics 3 Solved."
