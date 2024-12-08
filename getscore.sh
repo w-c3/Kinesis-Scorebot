@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Download the latest version of the scorebot script
-curl -o scorebot.sh #!!! !!! !!! !!!INSERT YOUR RAW GITHUB LINK HERE!!! !!! !!! !!!
+curl -o scorebot.sh #!!! !!! !!! !!!INSERT YOUR RAW GITHUB LINK HERE!!! !!! !!! !!! 2>/dev/null
 
 # Ensure the download was successful
 if [ $? -ne 0 ]; then
