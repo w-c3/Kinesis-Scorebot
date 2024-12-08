@@ -71,7 +71,7 @@ check_file_permissions() {
 }
 
 echo " "
-echo ">> Insert image name here <<"
+echo ">> Arcane R3 <<"
 echo " "
 
 # example usage
