@@ -75,4 +75,4 @@ echo ">> Arcane R3 <<"
 echo " "
 
 # example usage
-check_text_exists "/etc/passwd" "administrator" "Added administrator user" # DELETE THIS
+check_text_exists "/home/ekko/Desktop/Forensics_1.txt" "2024-12-03 14:35:12 Viktor accessed restricted research data." "Forensics 1 Solved."
