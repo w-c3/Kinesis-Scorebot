@@ -74,7 +74,7 @@ check_file_ownership() { # Thanks Coyne <3
     local file="$1"
     local expected_owner="$2"
     local vuln_name="$3"
-     if getfacl "$file" | grep -q "owner: $expected_owner" 2>/dev/null; then
+     if getfacl "$file" 2>/dev/null | grep -q "owner: $expected_owner"; then
         echo "Vulnerability fixed: '$vuln_name'"
     else
         echo "Unsolved Vuln"
