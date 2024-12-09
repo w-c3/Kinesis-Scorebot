@@ -107,3 +107,7 @@ check_text_not_exists "/etc/crontab" "/etc/manager/monitor.sh" "Removed maliciou
 check_file_permissions "/tmp" "1777" "Stickybit set on /tmp."
 check_file_permissions "/var/tmp" "1777" "Stickybit set on /var/tmp."
 
+check_text_exists "/etc/sysctl.conf" "net.ipv4.conf.all.log_martians = 1" "Enabled logging of Martian Packets"
+check_text_exists "/etc/sysctl.conf" "net.ipv4.tcp_rfc1337 = 1" "IPv4 TIME-WAIT assassination protection enabled"
+
+check_file_permissions "/etc/shadow" "600" "Shadow file permissions fixed"
