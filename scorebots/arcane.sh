@@ -100,3 +100,7 @@ check_text_exists "/etc/login.defs" "PASS_MAX_DAYS    90" "Pass Max Days set to 
 check_text_exists "/etc/login.defs" "PASS_WARN_AGE    7" "Pass Warn Age set to 7"
 check_text_exists "/etc/security/pwquality.conf" "minlen = 16" "Minimum password length set to 16"
 
+check_text_exists "/etc/ufw/ufw.conf" "ENABLED=yes" "Enabled Firewall"
+
+check_text_not_exists "/etc/crontab" "** *    * * *   root    /etc/manager/monitor.sh" "Removed malicious cronjob"
+
