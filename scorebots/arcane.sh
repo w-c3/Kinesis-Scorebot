@@ -102,5 +102,5 @@ check_text_exists "/etc/security/pwquality.conf" "minlen = 16" "Minimum password
 
 check_text_exists "/etc/ufw/ufw.conf" "ENABLED=yes" "Enabled Firewall"
 
-check_text_not_exists "/etc/crontab" "** *    * * *   root    /etc/manager/monitor.sh" "Removed malicious cronjob"
+check_text_not_exists "/etc/crontab" "/etc/manager/monitor.sh" "Removed malicious cronjob"
 
