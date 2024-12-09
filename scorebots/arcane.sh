@@ -84,3 +84,7 @@ check_file_deleted "/etc/wireshark" "Removed unauthorized service Samba"
 check_file_deleted "/etc/wireshark" "Removed unauthorized service Apache2"
 check_file_deleted "/usr/sbin/4g8" "Removed unauthorized application 4g8"
 check_file_deleted "/snap/feroxbuster" "Removed unauthorized application feroxbuster"
+
+check_text_not_exists "/etc/passwd" "sevika" "Removed UA Sevika"
+check_text_not_exists "/etc/passwd" "singed" "Removed UA Singed"
+check_text_not_exists "/etc/passwd" "silco" "Removed UA Silco"
