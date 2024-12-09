@@ -89,7 +89,7 @@ check_text_not_exists "/etc/passwd" "sevika" "Removed UA Sevika"
 check_text_not_exists "/etc/passwd" "singed" "Removed UA Singed"
 check_text_not_exists "/etc/passwd" "silco" "Removed UA Silco"
 
-check_text_not_exists "/etc/group" "sudo:x:27:ekko,jinx,sevika," "Removed Unauthorized Admins Jinx and Sevika"
+check_text_not_exists "/etc/group" "sudo:x:27:ekko,sevika,jinx" "Removed Unauthorized Admins Jinx and Sevika"
 
 check_text_not_exists "/etc/shadow" "zVAroijrVh2rzlvRlw4Y7novSy7gCNSt92:20065:0:99999:7:::" "Changed insecure password for user Vi"
 
