@@ -70,6 +70,19 @@ check_file_permissions() {
     fi
 }
 
+check_file_ownership() { # Thanks Coyne <3
+    local file="$1"
+    local expected_owner="$2"
+    local vuln_name="$3"
+     if getfacl "$file" | grep -q "owner: $expected_owner"; then
+        echo "Vulnerability fixed: '$vuln_name'"
+    else
+        echo "Unsolved Vuln"
+    fi
+}
+
+
+
 echo " "
 echo ">> Arcane R3 <<"
 echo " "
@@ -113,4 +126,6 @@ check_text_exists "/etc/sysctl.conf" "net.ipv4.tcp_rfc1337 = 1" "IPv4 TIME-WAIT 
 check_file_permissions "/etc/shadow" "600" "Shadow file permissions fixed"
 
 check_text_exists "/etc/ssh/ssh_config" "ForwardX11 no" "SSH Disabled X11 Forwarding"
-check_text_exists "/etc/ssh/ssh_config" "PermitRootLogin no" "SSH does NOT permit root login."
+check_text_exists "/etc/ssh/ssh_config" "PermitRootLogin no" "SSH does NOT permit root login"
+
+check_file_ownership "/etc/group" "root" "Fixed file owner on /etc/group"
