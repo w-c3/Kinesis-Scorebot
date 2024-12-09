@@ -88,3 +88,10 @@ check_file_deleted "/snap/feroxbuster" "Removed unauthorized application feroxbu
 check_text_not_exists "/etc/passwd" "sevika" "Removed UA Sevika"
 check_text_not_exists "/etc/passwd" "singed" "Removed UA Singed"
 check_text_not_exists "/etc/passwd" "silco" "Removed UA Silco"
+
+check_text_not_exists "/etc/group" "sudo:x:27:ekko,jinx,sevika," "Removed Unauthorized Admins Jinx and Sevika"
+
+check_text_not_exists "/etc/shadow" "zVAroijrVh2rzlvRlw4Y7novSy7gCNSt92:20065:0:99999:7:::" "Changed insecure password for user Vi"
+
+check_file_deleted "/home/powder/Media" "remember_me.mp4" "Removed unauthorized MP4 file"
+check_file_deleted "/home/vander/Movies" "arcane.mov" "Removed unauthorized .mov file"
