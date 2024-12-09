@@ -111,3 +111,6 @@ check_text_exists "/etc/sysctl.conf" "net.ipv4.conf.all.log_martians = 1" "Enabl
 check_text_exists "/etc/sysctl.conf" "net.ipv4.tcp_rfc1337 = 1" "IPv4 TIME-WAIT assassination protection enabled"
 
 check_file_permissions "/etc/shadow" "600" "Shadow file permissions fixed"
+
+check_text_exists "/etc/ssh/ssh_config" "ForwardX11 no" "SSH Disabled X11 Forwarding"
+check_text_exists "/etc/ssh/ssh_config" "PermitRootLogin no" "SSH does NOT permit root login."
