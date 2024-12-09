@@ -117,8 +117,8 @@ check_text_exists "/etc/ufw/ufw.conf" "ENABLED=yes" "Enabled Firewall"
 
 check_text_not_exists "/etc/crontab" "/etc/manager/monitor.sh" "Removed malicious cronjob"
 
-check_file_permissions "/tmp" "1777" "Stickybit set on /tmp."
-check_file_permissions "/var/tmp" "1777" "Stickybit set on /var/tmp."
+check_file_permissions "/tmp" "1777" "Stickybit set on /tmp"
+check_file_permissions "/var/tmp" "1777" "Stickybit set on /var/tmp"
 
 check_text_exists "/etc/sysctl.conf" "net.ipv4.conf.all.log_martians = 1" "Enabled logging of Martian Packets"
 check_text_exists "/etc/sysctl.conf" "net.ipv4.tcp_rfc1337 = 1" "IPv4 TIME-WAIT assassination protection enabled"
@@ -129,3 +129,6 @@ check_text_exists "/etc/ssh/ssh_config" "ForwardX11 no" "SSH Disabled X11 Forwar
 check_text_exists "/etc/ssh/ssh_config" "PermitRootLogin no" "SSH does NOT permit root login"
 
 check_file_ownership "/etc/group" "root" "Fixed file owner on /etc/group"
+
+check_text_exists "/etc/postgresql/15/main/postgresql.conf" "log_connections = on" "Postgresql Logs Connections"
+check_text_not_exists "/etc/postgresql/15/main/pg_hba.conf" "silco" "Removed malicious user mapping for PSQL"
