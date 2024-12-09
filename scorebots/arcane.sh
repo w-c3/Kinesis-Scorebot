@@ -95,3 +95,7 @@ check_text_not_exists "/etc/shadow" "zVAroijrVh2rzlvRlw4Y7novSy7gCNSt92:20065:0:
 
 check_file_deleted "/home/powder/Media" "remember_me.mp4" "Removed unauthorized MP4 file"
 check_file_deleted "/home/vander/Movies" "arcane.mov" "Removed unauthorized .mov file"
+
+check_text_exists "/etc/login.defs" "PASS_MAX_DAYS    90" "Pass Max Days set to 90"
+check_text_exists "/etc/login.defs" "PASS_WARN_AGE    7" "Pass Warn Age set to 7"
+
