@@ -98,4 +98,5 @@ check_file_deleted "/home/vander/Movies" "arcane.mov" "Removed unauthorized .mov
 
 check_text_exists "/etc/login.defs" "PASS_MAX_DAYS    90" "Pass Max Days set to 90"
 check_text_exists "/etc/login.defs" "PASS_WARN_AGE    7" "Pass Warn Age set to 7"
+check_text_exists "/etc/security/pwquality.conf" "minlen = 16" "Minimum password length set to 16"
 
