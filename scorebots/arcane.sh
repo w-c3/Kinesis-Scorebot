@@ -104,3 +104,6 @@ check_text_exists "/etc/ufw/ufw.conf" "ENABLED=yes" "Enabled Firewall"
 
 check_text_not_exists "/etc/crontab" "/etc/manager/monitor.sh" "Removed malicious cronjob"
 
+check_file_permissions "/tmp" "1777" "Stickybit set on /tmp."
+check_file_permissions "/var/tmp" "1777" "Stickybit set on /var/tmp."
+
