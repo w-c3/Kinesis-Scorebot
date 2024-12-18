@@ -73,5 +73,18 @@
 
 
 
-- V2 COMING SOON
-  ![image-removebg-preview](https://github.com/user-attachments/assets/0c915e10-d969-4fd1-8785-c18b2a8c2122)
+
+
+
+
+
+
+
+
+
+
+
+- V2 COMING **VERY** SOON
+
+
+![image-removebg-preview](https://github.com/user-attachments/assets/0c915e10-d969-4fd1-8785-c18b2a8c2122)
