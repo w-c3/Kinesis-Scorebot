@@ -49,3 +49,29 @@
 - Tamper-proof system
 
 - Better injects system
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+- V2 COMING SOON
+  ![image-removebg-preview](https://github.com/user-attachments/assets/0c915e10-d969-4fd1-8785-c18b2a8c2122)
