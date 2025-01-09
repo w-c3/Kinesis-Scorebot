@@ -38,6 +38,8 @@
 3. Add an alias inside of /etc/bash.bashrc that links the term 'score' to the script created above.
 4. Thats it!
 
+If you still are confused about the scorebot itself, navigate to the 'scorebots' folder in this repo for some example scorebots I've used in previous practice images.
+
 ***Why 'Kinesis'***
 
 - IDK it sounded cool
