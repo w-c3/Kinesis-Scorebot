@@ -52,6 +52,8 @@ If you still are confused about the scorebot itself, navigate to the 'scorebots'
 
 - Better injects system
 
+- New functions and new ways to score points, including a fixed permissions function that allows for scoring stickybits.
+
 
 
 
