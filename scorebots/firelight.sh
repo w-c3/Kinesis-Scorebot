@@ -86,3 +86,6 @@ echo " "
 
 # scoring
 check_text_exists "/home/ekko/Desktop/Forensics_1.txt" "caitlynk@arcane.com" "Forensics 1 Correct"
+
+# Apache
+check_text_exists "/etc/apache2/apache2.conf" "-Indexes" "Fixed insecure directory listing configuration"
