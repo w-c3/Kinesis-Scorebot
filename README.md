@@ -3,6 +3,7 @@
 ![image-removebg-preview](https://github.com/user-attachments/assets/0c915e10-d969-4fd1-8785-c18b2a8c2122)
 
 ---
+
 # v2 Rollout
 - **Currently Implemented features:**
   - Ownership File Check
@@ -14,6 +15,8 @@
   - Better injects system
 
   - New functions and new ways to score points, including a fixed permissions function that allows for scoring stickybits.
+
+---
 
 ***What is it?***
 
