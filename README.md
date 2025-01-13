@@ -1,6 +1,19 @@
-# Kinesis-Scorebot
+# Kinesis-Scorebot v2
 
-![363435303-fce4a796-2f7f-412e-bb7c-ec896e4a7a28-removebg-preview](https://github.com/user-attachments/assets/eff8486d-ad2b-4185-87e6-edcdbb0851f6)
+![image-removebg-preview](https://github.com/user-attachments/assets/0c915e10-d969-4fd1-8785-c18b2a8c2122)
+
+---
+# v2 Rollout
+- **Currently Implemented features:**
+  - Ownership File Check
+- **Features inbound soon:**
+  - Way to hide scorebot code from user to prevent cheating
+
+  - Tamper-proof system
+
+  - Better injects system
+
+  - New functions and new ways to score points, including a fixed permissions function that allows for scoring stickybits.
 
 ***What is it?***
 
@@ -44,51 +57,4 @@ If you still are confused about the scorebot itself, navigate to the 'scorebots'
 
 - IDK it sounded cool
 
-***Planned features***
 
-- Way to hide scorebot code from user to prevent cheating
-
-- Tamper-proof system
-
-- Better injects system
-
-- New functions and new ways to score points, including a fixed permissions function that allows for scoring stickybits.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# V2 COMING **VERY** SOON
-
-
-![image-removebg-preview](https://github.com/user-attachments/assets/0c915e10-d969-4fd1-8785-c18b2a8c2122)
