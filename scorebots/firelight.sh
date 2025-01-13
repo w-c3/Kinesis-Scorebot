@@ -85,4 +85,4 @@ echo ">> Firelight LAMPSS Round 4 <<"
 echo " "
 
 # scoring
-
+check_text_exists "/home/ekko/Desktop/Forensics_1.txt" "caitlynk@arcane.com" "Forensics 1 Correct"
