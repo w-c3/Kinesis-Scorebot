@@ -102,6 +102,10 @@ check_text_not_exists "/etc/mysql/mysql.conf.d/mysqld.cnf" "1M" "Fixed insecure 
 # PHP
 check_text_exists "/etc/php/8.1/apache2/php.ini" "expose_php = Off" "Fixed insecure PHP configuration."
 check_text_exists "/etc/php/8.1/apache2/php.ini" "display_errors = Off" "Fixed insecure PHP configuration."
+check_text_exists "/etc/php/8.1/apache2/php.ini" "allow_url_include = Off" "Fixed insecure PHP configuration."
+check_text_exists "/etc/php/8.1/apache2/php.ini" "upload_max_filesize = 2M" "Fixed insecure PHP configuration."
+
+
 
 
 
