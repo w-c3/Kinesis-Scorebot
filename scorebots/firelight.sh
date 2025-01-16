@@ -88,4 +88,20 @@ echo " "
 check_text_exists "/home/ekko/Desktop/Forensics_1.txt" "caitlynk@arcane.com" "Forensics 1 Correct"
 
 # Apache
-check_text_exists "/etc/apache2/apache2.conf" "-Indexes" "Fixed insecure directory listing configuration"
+check_text_exists "/etc/apache2/apache2.conf" "-Indexes" "Fixed insecure Apache2 configuration."
+check_text_exists "/etc/apache2/conf-enabled/security.conf" "ServerTokens Prod" "Fixed insecure Apache2 configuration."
+check_text_exists "/etc/apache2/conf-enabled/security.conf" "TraceEnable Off" "Fixed insecure Apache2 configuration."
+check_text_exists "/etc/apache2/ports.conf" "443" "Fixed insecure Apache2 configuration."
+check_file_permissions "/var/www/html" "755" "Fixed permissions on /var/www/html"
+
+# MySQL
+check_text_exists "/etc/mysql/mysql.conf.d/mysqld.cnf" "3306" "Fixed insecure MySQL configuration."
+check_text_exists "/etc/mysql/mysql.conf.d/mysqld.cnf" "100M" "Fixed insecure MySQL configuration."
+check_text_not_exists "/etc/mysql/mysql.conf.d/mysqld.cnf" "1M" "Fixed insecure MySQL configuration."
+
+# PHP
+check_text_exists "/etc/php/8.1/apache2/php.ini" "expose_php = Off" "Fixed insecure PHP configuration."
+check_text_exists "/etc/php/8.1/apache2/php.ini" "display_errors = Off" "Fixed insecure PHP configuration."
+
+
+
