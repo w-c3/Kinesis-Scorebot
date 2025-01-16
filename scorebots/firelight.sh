@@ -105,6 +105,14 @@ check_text_exists "/etc/php/8.1/apache2/php.ini" "display_errors = Off" "Fixed i
 check_text_exists "/etc/php/8.1/apache2/php.ini" "allow_url_include = Off" "Fixed insecure PHP configuration."
 check_text_exists "/etc/php/8.1/apache2/php.ini" "upload_max_filesize = 2M" "Fixed insecure PHP configuration."
 
+# Squid
+
+# SSH
+
+# Unwanted shtuff
+check_file_deleted "/bin/proxychains" "Removed unauthorized software." #proxychains
+check_file_deleted "/usr/sbin/hunt" "Removed unauthorized software."
+check_file_deleted "/etc/p0f" "Removed unauthorized software." # P0f
 
 
 
