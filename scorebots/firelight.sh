@@ -106,6 +106,11 @@ check_text_exists "/etc/php/8.1/apache2/php.ini" "allow_url_include = Off" "Fixe
 check_text_exists "/etc/php/8.1/apache2/php.ini" "upload_max_filesize = 2M" "Fixed insecure PHP configuration."
 
 # Squid
+check_text_not_exists "/etc/squid/squid/conf" "http_access allow all" "Removed insecure SquidProxy configuration"
+check_text_not_exists "/etc/squid/squid/conf" "icap_enable off" "Removed insecure SquidProxy configuration"
+check_text_exists "/usr/lib/systemd/system/squid.service" "User=squid" "Fixed insecure SquidProxy configuration"
+check_text_exists "/usr/lib/systemd/system/squid.service" "Group=squid" "Fixed insecure SquidProxy configuration"
+check_text_exists "/etc/squid/squid.conf" "httpd_suppress_version_string on" "Fixed insecure SquidProxy configuration"
 
 # SSH
 
