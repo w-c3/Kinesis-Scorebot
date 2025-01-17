@@ -54,15 +54,31 @@ check_file_deleted() {
     fi
 }
 
+#check_file_permissions() {
+#    local file="$1"
+#    local expected_permissions="$2"
+#    local vuln_name="$3"
+    
+    # Get the actual permissions of the file in numeric form (e.g., 644)
+#    actual_permissions=$(stat -c "%a" "$file")
+    
+#    if [ "$actual_permissions" == "$expected_permissions" ]; then
+#        echo "Vulnerability fixed: '$vuln_name'"
+#    else
+ #       echo "Unsolved Vuln"
+#    fi
+#}
+
 check_file_permissions() {
     local file="$1"
     local expected_permissions="$2"
     local vuln_name="$3"
     
-    # Get the actual permissions of the file in numeric form (e.g., 644)
+    # Get the actual permissions of the file in numeric form (e.g., 4755)
     actual_permissions=$(stat -c "%a" "$file")
     
-    if [ "$actual_permissions" == "$expected_permissions" ]; then
+    # Compare bit by bit to check for specific permission requirements
+    if (( (actual_permissions & expected_permissions) == expected_permissions )); then
         echo "Vulnerability fixed: '$vuln_name'"
     else
         echo "Unsolved Vuln"
@@ -86,6 +102,14 @@ echo " "
 
 # scoring
 check_text_exists "/home/ekko/Desktop/Forensics_1.txt" "caitlynk@arcane.com" "Forensics 1 Correct"
+check_text_exists "/home/ekko/Desktop/Forensics_1.txt" "CVE-2025-23013" "Forensics 2 Correct"
+check_text_exists "/home/ekko/Desktop/Forensics_1.txt" "" "Forensics 3 Correct"
+
+
+# users
+
+# misc
+check_file_permissions "/bin/vim" "0644" "fixed"
 
 # Apache
 check_text_exists "/etc/apache2/apache2.conf" " -Indexes " "Fixed insecure Apache2 configuration."
@@ -113,6 +137,10 @@ check_text_exists "/usr/lib/systemd/system/squid.service" "Group=squid" "Fixed i
 check_text_exists "/etc/squid/squid.conf" "httpd_suppress_version_string on" "Fixed insecure SquidProxy configuration"
 
 # SSH
+check_text_exists "/etc/ssh/sshd_config" "LoginGraceTime" "SSH login grace time set"
+check_text_exists "/etc/ssh/sshd_config" "LogLevel INFO" "SSH LogLevel set to Info"
+check_text_exists "/etc/ssh/sshd_config" "PermitRootLogin no" "SSH root login disabled"
+
 
 # Unwanted shtuff
 check_file_deleted "/bin/proxychains" "Removed unauthorized software." #proxychains
