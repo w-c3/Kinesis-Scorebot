@@ -88,7 +88,7 @@ echo " "
 check_text_exists "/home/ekko/Desktop/Forensics_1.txt" "caitlynk@arcane.com" "Forensics 1 Correct"
 
 # Apache
-check_text_exists "/etc/apache2/apache2.conf" "-Indexes" "Fixed insecure Apache2 configuration."
+check_text_exists "/etc/apache2/apache2.conf" " -Indexes " "Fixed insecure Apache2 configuration."
 check_text_exists "/etc/apache2/conf-enabled/security.conf" "ServerTokens Prod" "Fixed insecure Apache2 configuration."
 check_text_exists "/etc/apache2/conf-enabled/security.conf" "TraceEnable Off" "Fixed insecure Apache2 configuration."
 check_text_exists "/etc/apache2/ports.conf" "443" "Fixed insecure Apache2 configuration."
