@@ -102,8 +102,8 @@ echo " "
 
 # scoring
 check_text_exists "/home/ekko/Desktop/Forensics_1.txt" "caitlynk@arcane.com" "Forensics 1 Correct"
-check_text_exists "/home/ekko/Desktop/Forensics_1.txt" "CVE-2025-23013" "Forensics 2 Correct"
-check_text_exists "/home/ekko/Desktop/Forensics_1.txt" "" "Forensics 3 Correct"
+check_text_exists "/home/ekko/Desktop/Forensics_2.txt" "CVE-2025-23013" "Forensics 2 Correct"
+check_text_exists "/home/ekko/Desktop/Forensics_3.txt" "ChatGPT" "Forensics 3 Correct"
 
 
 # users
