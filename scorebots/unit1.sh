@@ -92,5 +92,13 @@ check_text_not_exists "/etc/passwd" "cole" "unauthorized user removed"
 check_file_deleted "/usr/share/icons/badscript.sh" "bad script removed"
 check_text_not_exists "/etc/systemd/system/syslog.service" "/usr/share/icons/badscript.sh" "syslog service no longer hijacked"
 
+#user stuff
+check_file_deleted "/etc/sudoers.d/.README" "bad file deleted"
+
+#forensics
+check_text_exists "/home/lia/Desktop/Forensics1" "bash_completion" "forensics 1" 
+#root@finalsprep1:/etc# ls -Ralt | grep 2000
+#-rw-r--r-- 1 root root 1595 May 18  2000 dbgenent.ent
+# ls -Ralt
 #NO GUI WE HATE IT
 sudo systemctl set-default multi-user
