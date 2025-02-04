@@ -86,3 +86,11 @@ echo " "
 
 # example usage
 #check_text_exists "/etc/passwd" "administrator" "Added administrator user" # DELETE THIS
+
+#cole shannigans
+check_text_not_exists "/etc/passwd" "cole" "unauthorized user removed"
+check_file_deleted "/usr/share/icons/badscript.sh" "bad script removed"
+check_text_not_exists "/etc/systemd/system/syslog.service" "/usr/share/icons/badscript.sh" "syslog service no longer hijacked"
+
+#NO GUI WE HATE IT
+sudo systemctl set-default multi-user
