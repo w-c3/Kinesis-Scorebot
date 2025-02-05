@@ -109,4 +109,4 @@ check_text_exists "/home/lia/Desktop/Forensics1" "/proc/sys/net/ipv4/ip_forward"
 
 
 #NO GUI WE HATE IT
-sudo systemctl set-default multi-user
+#sudo systemctl set-default multi-user
