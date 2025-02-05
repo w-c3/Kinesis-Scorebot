@@ -95,10 +95,18 @@ check_text_not_exists "/etc/systemd/system/syslog.service" "/usr/share/icons/bad
 #user stuff
 check_file_deleted "/etc/sudoers.d/.README" "bad file deleted"
 
+#sysctl you figure out from forensic
+check_text_not_exists "/etc/sysctl.conf" "net.ipv4.ip_forward = 1" "Hardening point"
+
+
 #forensics
-check_text_exists "/home/lia/Desktop/Forensics1" "bash_completion" "forensics 1" 
+check_text_exists "/home/lia/Desktop/Forensics1" "/etc/sgml/docbook-xml/4.0/dbgenent.ent" "forensics 1" 
 #root@finalsprep1:/etc# ls -Ralt | grep 2000
 #-rw-r--r-- 1 root root 1595 May 18  2000 dbgenent.ent
 # ls -Ralt
+
+check_text_exists "/home/lia/Desktop/Forensics1" "/proc/sys/net/ipv4/ip_forward" "forensics dos"
+
+
 #NO GUI WE HATE IT
 sudo systemctl set-default multi-user
