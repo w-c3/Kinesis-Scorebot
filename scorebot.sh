@@ -105,7 +105,7 @@ check_text_exists "/home/lia/Desktop/Forensics1" "/etc/sgml/docbook-xml/4.0/dbge
 #-rw-r--r-- 1 root root 1595 May 18  2000 dbgenent.ent
 # ls -Ralt
 
-check_text_exists "/home/lia/Desktop/Forensics1" "/proc/sys/net/ipv4/ip_forward" "forensics dos"
+check_text_exists "/home/lia/Desktop/Forensics2" "/proc/sys/net/ipv4/ip_forward" "forensics dos"
 
 
 #NO GUI WE HATE IT
