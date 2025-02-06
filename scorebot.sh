@@ -110,3 +110,6 @@ check_text_exists "/home/lia/Desktop/Forensics2" "/proc/sys/net/ipv4/ip_forward"
 
 #NO GUI WE HATE IT
 #sudo systemctl set-default multi-user
+
+#https://github.com/milabs/awesome-linux-rootkits
+#https://security.stackexchange.com/questions/273216/kernel-level-attack
