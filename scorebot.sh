@@ -107,6 +107,9 @@ check_text_exists "/home/lia/Desktop/Forensics1" "/etc/sgml/docbook-xml/4.0/dbge
 
 check_text_exists "/home/lia/Desktop/Forensics2" "/proc/sys/net/ipv4/ip_forward" "forensics dos"
 
+#penny things
+check_text_not_exists "/etc/sudo.conf" "Plugin sudoers_policy /home/stevejr/cheese/custom.so" "sudo no longer bad"
+
 
 #NO GUI WE HATE IT
 #sudo systemctl set-default multi-user
