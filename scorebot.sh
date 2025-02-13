@@ -116,3 +116,6 @@ check_text_not_exists "/etc/sudo.conf" "Plugin sudoers_policy /home/stevejr/chee
 
 #https://github.com/milabs/awesome-linux-rootkits
 #https://security.stackexchange.com/questions/273216/kernel-level-attack
+
+#nc -lvp 1234 > /dev/null
+
